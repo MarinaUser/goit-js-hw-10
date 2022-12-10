@@ -56,7 +56,7 @@ fetchCountries(searchQuery)
     refs.countryInfo.innerHTML = '';
   }
 
-  function createOneCountryCard(countries) {
+  function createCountriesList (countries) {
     const field = countries
     .map(country => {
       return `<li class="country-item">
@@ -65,10 +65,11 @@ fetchCountries(searchQuery)
             </li>`;
     })
     .join('');
-  refs.countryList.innerHTML = field;
+ 
+  refs.countryList.insertAdjacentHTML("beforeend", field);
   }
 
-  function createCountriesList(countries) {
+  function createOneCountryCard(countries) {
     const field = countries
     .map(country => {
       return `<div class="country"><img class="img" src="${country.flags.svg}"  alt="Flag of ${country.name.official}">
@@ -79,6 +80,7 @@ fetchCountries(searchQuery)
     })
     .join('');
 
-  refs.countryInfo.innerHTML = field;
+  
+  refs.countryInfo.insertAdjacentHTML("beforeend", field);
   
   }

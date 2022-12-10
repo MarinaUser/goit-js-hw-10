@@ -17,5 +17,31 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+  
+  
 }
 
+.country-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  
+}
+
+
+img {
+  display: block;
+  width: 60px;
+  max-width: 60pp;
+  height: auto;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.country-item {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
